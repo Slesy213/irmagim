@@ -8,8 +8,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <style>
   html,body{margin:0;height:100%;background:#000;overflow:hidden;color:#fff;font-family:Poppins,"Segoe UI",Arial,sans-serif;-webkit-tap-highlight-color:transparent}
-  .bg{position:fixed;inset:-4%;background:#000 url(foto.jpg) center/cover no-repeat;filter:brightness(.4) contrast(1.05);animation:kb 28s ease-in-out infinite alternate}
-  @keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.12) translate(-1%,1%)}}
+  .bgblur{position:fixed;inset:-6%;background:#000 url(foto.jpg) center/cover no-repeat;filter:blur(30px) brightness(.32)}
+  .bg{position:fixed;inset:0;background:url(foto.jpg) center/contain no-repeat;filter:brightness(.5) contrast(1.05);animation:kb 30s ease-in-out infinite alternate}
+  @keyframes kb{from{transform:scale(1)}to{transform:scale(1.04)}}
   .shade{position:fixed;inset:0;background:radial-gradient(ellipse at 50% 36%,rgba(0,0,0,0) 0,rgba(0,0,0,.6) 100%),linear-gradient(transparent 55%,rgba(0,0,0,.8))}
   canvas{position:fixed;inset:0;width:100%;height:100%}
   .baslik{position:fixed;left:0;right:0;top:63%;text-align:center;padding:0 18px;opacity:0;transform:translateY(16px);transition:opacity 1.8s,transform 1.8s;pointer-events:none}
@@ -28,7 +29,7 @@
 </style>
 </head>
 <body>
-<div class="bg"></div><div class="shade"></div>
+<div class="bgblur"></div><div class="bg"></div><div class="shade"></div>
 <canvas id="c"></canvas>
 <div class="baslik" id="b"><h1 id="bt"></h1></div>
 <div class="gun" id="g"><div><b id="gn"></b> Gün</div></div>
